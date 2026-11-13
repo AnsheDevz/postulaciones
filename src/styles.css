@@ -1,0 +1,47 @@
+:root{--bg:#0f1220;--panel:#171b2e;--card:#1e2340;--line:#2b3157;--ink:#e8eaf6;--muted:#8d94b8;--acc:#7c5cff;--acc2:#27d3a2;--warn:#ffb020;--danger:#ff5d73}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1000px 500px at 80% -10%,#2a1f5c55,transparent),var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif;min-height:100vh}
+h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif;margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+.muted{color:var(--muted)}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.shell{max-width:1400px;margin:0 auto;padding:28px 24px 48px;display:flex;flex-direction:column;gap:20px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.top h1{font-size:34px;background:linear-gradient(90deg,#fff,#b9a8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.top__actions{display:flex;gap:10px}
+.btn{border:1px solid transparent;border-radius:10px;padding:9px 16px;font-weight:600;cursor:pointer;background:var(--card)}
+.btn.primary{background:linear-gradient(135deg,var(--acc),#5a3fe0)}.btn.primary:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;border-color:var(--line)}.btn.ghost:hover{background:var(--card)}
+.btn.danger{background:transparent;border-color:#ff5d7355;color:var(--danger)}
+:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;display:flex;flex-direction:column}
+.stat span{color:var(--muted);font-size:13px}.stat strong{font:700 30px 'Space Grotesk',sans-serif}
+.stat--alert strong{color:var(--warn)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap}
+input,select,textarea{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px;width:100%}
+.toolbar input{flex:1 1 260px}.toolbar select{width:auto}
+.board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,1fr);gap:14px;overflow-x:auto;padding-bottom:10px}
+.col{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px;min-height:320px;transition:border-color .15s,background .15s}
+.col--over{border-color:var(--acc);background:#1b1f3a}
+.col h2{font-size:15px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.col h2 span{background:var(--card);border-radius:99px;padding:0 9px;font-size:12px}
+.col__list{display:flex;flex-direction:column;gap:10px}
+.empty{text-align:center;font-size:13px;border:1px dashed var(--line);border-radius:12px;padding:20px 8px}
+.job{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;cursor:grab}
+.job:active{cursor:grabbing}.job--alert{border-color:var(--warn)}
+.job header{display:flex;justify-content:space-between;gap:8px}
+.job h3{font-size:15px}.job p{margin:0}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{background:#2b3157;border-radius:99px;padding:1px 10px;font-size:12px}
+.alert{color:var(--warn);font-size:13px}.notes{font-size:13px;color:var(--muted)}
+.move select{padding:5px 8px;font-size:13px}
+.x{background:none;border:0;color:var(--muted);cursor:pointer;font-size:18px;border-radius:8px;padding:2px 8px}.x:hover{background:#2b3157}
+.overlay{position:fixed;inset:0;background:#05070fcc;display:grid;place-items:center;padding:16px;z-index:10}
+.modal{background:var(--panel);border:1px solid var(--line);border-radius:18px;width:min(560px,100%);max-height:92vh;overflow:auto}
+.modal header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
+.modal form{padding:18px 20px 20px;display:flex;flex-direction:column;gap:12px}
+.modal label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600}
+.modal small{color:var(--danger);font-weight:500}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.actions{display:flex;gap:10px}
+@media(max-width:640px){.row{grid-template-columns:1fr}.board{grid-auto-columns:82%}}
