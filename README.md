@@ -26,3 +26,6 @@ Deploy a GitHub Pages: ver `.github/workflows/deploy.yml` (Settings → Pages �
 
 ## Transparencia
 Desarrollado con asistencia de IA (Claude). Reviso y puedo explicar cada decisión: ver [NOTAS-ENTREVISTA.md](NOTAS-ENTREVISTA.md).
+
+
+**Demo en vivo:** https://anshedevz.github.io/postulaciones/
